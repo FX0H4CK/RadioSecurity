@@ -1,0 +1,9 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+00:A0:57:3B:59:0E, 2020-12-16 16:18:18, 2020-12-16 16:18:21,  1,  63, WPA2, CCMP, PSK, -59,        5,        2,   0.  0.  0.  0,   6, LANCOM, 
+78:28:CA:C3:F7:17, 2020-12-16 16:18:19, 2020-12-16 16:18:19,  6,  -1, WPA, ,   ,  -1,        0,       45,   0.  0.  0.  0,   0, , 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+00:1B:EA:F2:DD:9F, 2020-12-16 16:18:17, 2020-12-16 16:18:21, -70,       49, (not associated) ,LANCOM
+00:0E:58:12:1C:5B, 2020-12-16 16:18:19, 2020-12-16 16:18:19, -62,       46, 78:28:CA:C3:F7:17,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
+

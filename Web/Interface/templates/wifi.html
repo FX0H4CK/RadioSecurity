@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}HomePage{%endblock%}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #d91f1f;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Wifi Encryption Strength</h2>
+
+<table>
+  <tr>
+    <th>SSID</th>
+    <th>Encryption</th>
+  </tr>
+  <tr>
+    <td> {{ SSID1 }}</td>
+    <td> {{ Encryption1 }}</td>
+  </tr>
+  <tr>
+    <td> {{ SSID2 }}</td>
+    <td> {{ Encryption2 }}</td>
+  </tr>
+  <tr>
+    <td> {{ SSID3 }}</td>
+    <td> {{ Encryption3 }}</td>
+  </tr>
+  <tr>
+    <td> {{ SSID4 }}</td>
+    <td> {{ Encryption4 }}</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+{% endblock %}
+

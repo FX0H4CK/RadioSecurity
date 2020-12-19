@@ -1,0 +1,9 @@
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+34:E2:FD:90:5B:2F, 2020-12-18 11:44:23, 2020-12-18 11:44:24, -79,       10, (not associated) ,LANCOM
+A2:53:56:6A:F2:B6, 2020-12-18 11:44:39, 2020-12-18 11:45:25, -75,       50, 00:25:00:FF:94:73,
+00:0E:58:12:1C:5B, 2020-12-18 11:44:11, 2020-12-18 11:45:37, -68,       73, 78:28:CA:C3:F6:E7,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
+20:DF:B9:7E:8D:D9, 2020-12-18 11:44:51, 2020-12-18 11:44:51, -73,       10, (not associated) ,LANCOM
+78:28:CA:C3:F7:17, 2020-12-18 11:44:11, 2020-12-18 11:45:34, -52,       29, 00:0E:58:12:1C:5B,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
+FE:C0:74:73:59:67, 2020-12-18 11:44:42, 2020-12-18 11:44:42, -43,        2, (not associated) ,
+78:28:CA:C3:F6:E7, 2020-12-18 11:44:11, 2020-12-18 11:45:37,   0,       26, (not associated) ,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
+00:1B:EA:F2:DD:9F, 2020-12-18 11:45:39, 2020-12-18 11:45:39, -77,        6, (not associated) ,LANCOM
