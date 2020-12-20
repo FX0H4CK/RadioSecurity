@@ -1,3 +1,4 @@
 #! /bin/sh
 sudo rm ../Raw/scan-01.csv 
+sudo /usr/local/src/re4son-kernel_4.14.93-20190126/tools/mon0up
 sudo airodump-ng mon0 -w ../Raw/scan --write-interval 15 --uptime --output-format=csv -c 1-14
