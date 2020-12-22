@@ -7,10 +7,7 @@ import sys
 import requests
 import time
 
-#os.remove('../Raw/SSIDs.csv')
-#os.remove('../Raw/Clients.csv')
 while True:
-    print("Execute")
     with open ('../Raw/scan-01.csv', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
         next(reader,None) #Skip first Line

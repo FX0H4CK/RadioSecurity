@@ -1,5 +1,11 @@
 
 BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+38:EA:A7:C8:D8:97, 2020-12-22 13:32:52, 2020-12-22 13:32:56,  1,  58, OPN, ,   , -71,        8,        0,   0.  0.  0.  0,  27, HP-Print-97-Photosmart 5520, 
+00:A0:57:3B:59:0E, 2020-12-22 13:32:52, 2020-12-22 13:32:56,  1, 195, WPA2, CCMP, PSK, -48,        5,        3,   0.  0.  0.  0,   6, LANCOM, 
+78:28:CA:C3:F7:17, 2020-12-22 13:32:53, 2020-12-22 13:32:57,  6,  -1, WPA, ,   ,  -1,        0,       89,   0.  0.  0.  0,   0, , 
 
 Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+00:0E:58:12:1C:5B, 2020-12-22 13:32:53, 2020-12-22 13:32:57, -56,       91, 78:28:CA:C3:F7:17,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
+78:28:CA:C3:F6:E7, 2020-12-22 13:32:54, 2020-12-22 13:32:57, -40,        4, (not associated) ,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
+78:28:CA:C3:F7:17, 2020-12-22 13:32:54, 2020-12-22 13:32:57, -38,        4, (not associated) ,Sonos_Cr28BLh2UVPK2bdMZbhZfdUE90
 

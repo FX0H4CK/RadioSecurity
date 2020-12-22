@@ -1,4 +1,5 @@
 #! /bin/sh
-sudo rm ../Raw/scan-01.csv 
-sudo /usr/local/src/re4son-kernel_4.14.93-20190126/tools/mon0up
-sudo airodump-ng mon0 -w ../Raw/scan --write-interval 15 --uptime --output-format=csv -c 1-14
+sudo rm ../Raw/scan-01.csv #Alten Scan entfernen, da dieser bereits in der Datenbank ist
+#sudo /usr/local/src/re4son-kernel_4.14.93-20190126/tools/mon0up #Befehl fuer RPi 3 mit Raspberry Pi OS
+sudo airmon-ng start wlan0 #wlan0mon interface starten
+sudo airodump-ng wlan0mon -w ../Raw/scan --write-interval 15 --uptime --output-format=csv -c 1-14 #Scan durchfuehren in Outputfile
