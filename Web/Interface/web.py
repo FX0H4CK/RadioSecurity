@@ -6,6 +6,7 @@ from flask import Flask, redirect, url_for, render_template, request, session, f
 from datetime import timedelta
 import csv
 import requests
+import mariadb
 
 app = Flask(__name__)
 
@@ -16,22 +17,30 @@ def home():
 
 @app.route("/wifi")
 def wifi():
-        with open ('../../Wifi/Raw/SSIDs.csv', newline='') as csvfile:
-            reader = csv.reader(csvfile, delimiter=',', quotechar='|')
-            data = []
-            for row in reader:
-                data.append(row)
-
-            i=1
-            render_str=''
-            #renderstr+=('"wifi.html"')
-            for i in range(0,15):
-                exec("global SSID%d; global ENC%d; global MAC%d; global ls%d; SSID%d='';ENC%d=''; MAC%d='';ls%d='';"% (i+1, i+1, i+1, i+1,i+1,i+1,i+1,i+1));
-            for i in range(1,len(data)):
-                exec("""global SSID%d; SSID%d = data[%d][13].replace('" "', 'Versteckt').replace('"', '');""" % (i,i,i));
-                exec("""global ENC%d; ENC%d = data[%d][5].replace('"', '');""" % (i,i,i)); 
-                exec("""global MAC%d; MAC%d = data[%d][0].replace('"', '');""" % (i,i,i));
-                exec("""global ls%d; ls%d = data[%d][2].replace('"', '');""" % (i,i,i));
+        for i in range(0,15):
+            exec("global SSID%d; global ENC%d; global MAC%d; global ls%d; SSID%d='';ENC%d=''; MAC%d='';ls%d='';"% (i+1, i+1, i+1, i+1,i+1,i+1,i+1,i+1));
+        try:
+            conn = mariadb.connect(
+                    user="reader",
+                    password="PW4readonly",
+                    host="127.0.0.1",
+                    port=3306,
+                    database="radio_mon"
+            )
+        except mariadb.Error as e:
+            print(f"[x] Error while Connecting: {e}")
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT * FROM ssids;")
+            ssids = cursor.fetchall()
+        except mariadb.Error as e:
+            print(f"[x] Error while Reading Data: {e}")
+        
+        for i in range(1,len(ssids)):
+                exec("""global SSID%d; SSID%d = ssids[%d][13].replace('" "', 'Versteckt').replace('"', '');""" % (i,i,i));
+                exec("""global ENC%d; ENC%d = ssids[%d][5].replace('"', '');""" % (i,i,i)); 
+                exec("""global MAC%d; MAC%d = ssids[%d][0].replace('"', '');""" % (i,i,i));
+                exec("""global ls%d; ls%d = ssids[%d][2];""" % (i,i,i));
 
         return render_template("wifi.html", SSID1=SSID1, SSID2=SSID2, SSID3=SSID3, SSID4=SSID4, SSID5=SSID5, SSID6=SSID6, SSID7=SSID7, SSID8=SSID8, SSID9=SSID9, SSID10=SSID10, SSID11=SSID11, SSID12=SSID12, SSID13=SSID13, SSID14=SSID14, SSID15=SSID15, Encryption1=ENC1, Encryption2=ENC2, Encryption3=ENC3, Encryption4=ENC4, Encryption5=ENC5, Encryption6=ENC6, Encryption7=ENC7, Encryption8=ENC8, Encryption9=ENC9, Encryption10=ENC10, Encryption11=ENC11, Encryption12=ENC12, Encryption13=ENC13, Encryption14=ENC14, Encryption15=ENC15, MAC1=MAC1, MAC2=MAC2, MAC3=MAC3, MAC4=MAC4, MAC5=MAC5, MAC6=MAC6, MAC7=MAC7,MAC8=MAC8,MAC9=MAC9,MAC10=MAC10,MAC11=MAC11,MAC12=MAC12,MAC13=MAC13,MAC14=MAC14,MAC15=MAC15,ls1=ls1,ls2=ls2,ls3=ls3,ls4=ls4,ls5=ls5,ls6=ls6,ls7=ls7,ls8=ls8,ls9=ls9,ls10=ls10,ls11=ls11,ls12=ls12,ls13=ls13,ls14=ls14,ls15=ls15 )
 
