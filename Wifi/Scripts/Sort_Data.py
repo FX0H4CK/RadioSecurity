@@ -35,7 +35,7 @@ while True:
                 except mariadb.Error as e:
                     print(f"Error: {e}")
                 conn.commit()
-
+                conn.close()
 
             elif len(row)==7:
                 with open('../Raw/Clients.csv', 'a', newline='') as clients:
