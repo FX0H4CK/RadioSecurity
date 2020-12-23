@@ -1,11 +1,8 @@
     1   0.000000              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    2   4.532012              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    3  59.837726              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    4  65.478851              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    5  69.545457              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    6  74.098317              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    7  79.152099              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    8  83.729281              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    9  88.800338              → Broadcast    IEEE 802.15.4 10 Beacon Request
-   10 204.072569              →              IEEE 802.15.4 29 Multipurpose
-   11 323.291655       0xf083 →              IEEE 802.15.4 30 Fragment or Frak, Src: 0xf083[Packet size limited during capture][Malformed Packet]
+    2   4.569505              → Broadcast    IEEE 802.15.4 10 Beacon Request
+    3   9.132453              → Broadcast    IEEE 802.15.4 10 Beacon Request
+    4  14.675567              → Broadcast    IEEE 802.15.4 10 Beacon Request
+    5  19.754851              → Broadcast    IEEE 802.15.4 10 Beacon Request
+    6  24.383614              → Broadcast    IEEE 802.15.4 10 Beacon Request
+    7  28.491026              → Broadcast    IEEE 802.15.4 10 Beacon Request
+    8 1108.689839              →              IEEE 802.15.4 102 Fragment or Frak
