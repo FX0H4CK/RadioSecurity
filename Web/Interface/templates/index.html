@@ -1,6 +1,29 @@
 {% extends "base.html" %}
-{% block title %}HomePage{%endblock%}
+{% block title %}Allgemein{%endblock%}
 {% block content %}
-<h1>Home</h1>
+<h2>Allgemein</h2>
+<!--Percent of Known SSIDS vs Unkown-->
+<div class="clearfix">
+	<div class="c100 p{{ percent }} big {{ color }}">
+		<span>{{ percent }}%</span>
+		<div class="slice">
+			<div class="bar"></div>
+			<div class="fill"></div>
+		</div>
+		<a class="description"> Known </a>
+	</div>
+</div>
+<!--Percent of WPA2 SSIDS vs Others-->
+<div class="clearfix">
+	<div class="c100 p{{ percent_enc }} big {{ color_enc }}">
+		<span>{{ percent_enc }}%</span>
+		<div class="slice">
+			<div class="bar"></div>
+			<div class="fill"></div>
+		</div>
+		<a class="description"> WPA2 </a>
+	</div>
+</div>
+
 {% endblock %}
 
