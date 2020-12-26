@@ -28,102 +28,274 @@ th {
 
 <h2>BLE Found Devices</h2>
 
+<a class="dropdown" href="/ble"><button class="dropbtn">Alle</button></a>
+<a class="dropdown" href="/ble/unknown"><button class="dropbtn">Unbekannte</button></a>
+<a class="dropdown" href="/ble/known"><button class="dropbtn">Bekannte</button></a>
+<a class="dropdown" href="/ble/ignored"><button class="dropbtn">Ignorierte</button></a>
+
 <table>
   <tr>
     <th>Name</th>
     <th>MAC</th>
     <th>Vendor</th>
     <th>Verbindung</th>
+    <th>Last seen</th>
+    <th>Akzeptieren</th>
   </tr>
   <tr>
     <td> {{ Name1 }}</td>
     <td> {{ MAC1 }}</td>
     <td> {{ vendor1 }}</td>
     <td> {{ connect1 }}</td>
+    <td> {{ ls1 }}</td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC1 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC1 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name2 }}</td>
     <td> {{ MAC2 }}</td>
     <td> {{ vendor2 }}</td>
     <td> {{ connect2 }}</td>
+    <td> {{ ls2 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC2 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC2 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name3 }}</td>
     <td> {{ MAC3 }}</td>
     <td> {{ vendor3 }}</td>
     <td> {{ connect3 }}</td>
+    <td> {{ ls3 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC3 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC3 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name4 }}</td>
     <td> {{ MAC4 }}</td>
     <td> {{ vendor4 }}</td>
     <td> {{ connect4 }}</td>
+    <td> {{ ls4 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC4 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC4 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name5 }}</td>
     <td> {{ MAC5 }}</td>
     <td> {{ vendor5 }}</td>
     <td> {{ connect5 }}</td>
+    <td> {{ ls5 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC5 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC5 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name6 }}</td>
     <td> {{ MAC6 }}</td>
     <td> {{ vendor6 }}</td>
     <td> {{ connect6 }}</td>
+    <td> {{ ls6 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC6 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC6 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name7 }}</td>
     <td> {{ MAC7 }}</td>
     <td> {{ vendor7 }}</td>
     <td> {{ connect7 }}</td>
+    <td> {{ ls7 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC7 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC7 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name8 }}</td>
     <td> {{ MAC8 }}</td>
     <td> {{ vendor8 }}</td>
     <td> {{ connect8 }}</td>
+    <td> {{ ls8 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC8 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC8 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name9 }}</td>
     <td> {{ MAC9 }}</td>
     <td> {{ vendor9 }}</td>
     <td> {{ connect9 }}</td>
+    <td> {{ ls9 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC9 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC9 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name10 }}</td>
     <td> {{ MAC10 }}</td>
     <td> {{ vendor10 }}</td>
     <td> {{ connect10 }}</td>
+    <td> {{ ls10 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC10 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC10 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name11 }}</td>
     <td> {{ MAC11 }}</td>
     <td> {{ vendor11 }}</td>
     <td> {{ connect11 }}</td>
+    <td> {{ ls11 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC11 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC11 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name12 }}</td>
     <td> {{ MAC12 }}</td>
     <td> {{ vendor12 }}</td>
     <td> {{ connect12 }}</td>
+    <td> {{ ls12 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC12 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC12 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name13 }}</td>
     <td> {{ MAC13 }}</td>
     <td> {{ vendor13 }}</td>
     <td> {{ connect13 }}</td>
+    <td> {{ ls13 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC13 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC13 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name14 }}</td>
     <td> {{ MAC14 }}</td>
     <td> {{ vendor14 }}</td>
     <td> {{ connect14 }}</td>
+    <td> {{ ls14 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC14 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC14 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ Name15 }}</td>
     <td> {{ MAC15 }}</td>
     <td> {{ vendor15 }}</td>
     <td> {{ connect15 }}</td>
+    <td> {{ ls15 }}</td>
+    <td class="dropdown"<>
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="accept,{{ MAC15 }}" class="dropbtn">{{ button }}</button>
+	</form>
+    </td>
+    <td class="dropdown">
+	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore,{{ MAC15 }}" class="dropbtn">Ignorieren</button>
+	</form>
+    </td>
   </tr>
 </table>
 

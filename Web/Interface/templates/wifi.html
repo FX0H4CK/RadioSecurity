@@ -28,9 +28,10 @@ th {
 
 <h2>Wifi Encryption Strength</h2>
 
-<a class="dropdown" href="/wifi"><button class="dropbtn">Alle anzeigen</button></a>
-<a class="dropdown" href="/wifi/unknown"><button class="dropbtn">Unbekannte anzeigen</button></a>
-<a class="dropdown" href="/wifi/known"><button class="dropbtn">Bekannte anzeigen</button></a>
+<a class="dropdown" href="/wifi"><button class="dropbtn">Alle</button></a>
+<a class="dropdown" href="/wifi/unknown"><button class="dropbtn">Unbekannte</button></a>
+<a class="dropdown" href="/wifi/known"><button class="dropbtn">Bekannte</button></a>
+<a class="dropdown" href="/wifi/ignored"><button class="dropbtn">Ignorierte</button></a>
 
 
 <table>
@@ -50,7 +51,12 @@ th {
     <td> {{ ls1 }}</td>
     <td class="dropdown"> 
     	<form action="#" method="post">
-		<button name='accept' type="submit" value=" {{ MAC1 }} , {{ SSID1 }}" class="dropbtn">{{ button }}</button>
+		<button name='accept' type="submit" value="accept, {{ MAC1 }} , {{ SSID1 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC1 }} , {{ SSID1 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -65,6 +71,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC2 }} , {{ SSID2 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC2 }} , {{ SSID2 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID3 }}</td>
@@ -75,6 +86,11 @@ th {
     <td class ="dropdown">
     	<form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC3 }} , {{ SSID3 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC3 }} , {{ SSID3 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -89,6 +105,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC4 }} , {{ SSID4 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC4 }} , {{ SSID4 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID5 }}</td>
@@ -99,6 +120,11 @@ th {
     <td class ="dropdown">
     	<form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC5 }} , {{ SSID5 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC5 }} , {{ SSID5 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -113,6 +139,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC6 }} , {{ SSID6 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC6 }} , {{ SSID6 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID7 }}</td>
@@ -123,6 +154,11 @@ th {
     <td class ="dropdown">
     	<form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC7 }} , {{ SSID7 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC7 }} , {{ SSID7 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -137,6 +173,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC8 }} , {{ SSID8 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC8 }} , {{ SSID8 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID9 }}</td>
@@ -147,6 +188,11 @@ th {
     <td class ="dropdown">
     	<form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC9 }} , {{ SSID9 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC9 }} , {{ SSID9 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -161,6 +207,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC10 }} , {{ SSID10 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC10 }} , {{ SSID10 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID11 }}</td>
@@ -171,6 +222,11 @@ th {
     <td class ="dropdown">
     	<form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC11 }} , {{ SSID11 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC11 }} , {{ SSID11 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -185,6 +241,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC12 }} , {{ SSID12 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC12 }} , {{ SSID12 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID13 }}</td>
@@ -195,6 +256,11 @@ th {
     <td class ="dropdown">
         <form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC13 }} , {{ SSID13 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC13 }} , {{ SSID13 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>
@@ -209,6 +275,11 @@ th {
 		<button name='accept' type="submit" value=" {{ MAC14 }} , {{ SSID14 }}" class="dropbtn">{{ button }}</button>
     	</form>
     </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC14 }} , {{ SSID14 }}" class="dropbtn">Ignorieren</button>
+    	</form>
+    </td>
   </tr>
   <tr>
     <td> {{ SSID15 }}</td>
@@ -219,6 +290,11 @@ th {
     <td class ="dropdown">
     	<form action="#" method="post">
 		<button name='accept' type="submit" value=" {{ MAC15 }} , {{ SSID15 }}" class="dropbtn">{{ button }}</button>
+    	</form>
+    </td>
+    <td class="dropdown"> 
+    	<form action="#" method="post">
+		<button name='accept' type="submit" value="ignore, {{ MAC15 }} , {{ SSID15 }}" class="dropbtn">Ignorieren</button>
     	</form>
     </td>
   </tr>

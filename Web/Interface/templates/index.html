@@ -2,6 +2,7 @@
 {% block title %}Allgemein{%endblock%}
 {% block content %}
 <h2>Allgemein</h2>
+<h2>Wifi</h2>
 <!--Percent of Known SSIDS vs Unkown-->
 <div class="clearfix">
 	<div class="c100 p{{ percent }} big {{ color }}">
@@ -22,6 +23,18 @@
 			<div class="fill"></div>
 		</div>
 		<a class="description"> WPA2 </a>
+	</div>
+</div>
+<!--Percent of BLE Devices Known-->
+<div class="clearfix">
+	<h2 style="margin-top: 350px;">BLE</h2>
+	<div class="c100 p{{ ble_known }} big {{ color_ble_known }}">
+		<span>{{ ble_known }}%</span>
+		<div class="slice">
+			<div class="bar"></div>
+			<div class="fill"></div>
+		</div>
+		<a class="description"> Known </a>
 	</div>
 </div>
 
