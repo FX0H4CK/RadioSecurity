@@ -1,8 +1,0 @@
-    1   0.000000              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    2   4.569505              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    3   9.132453              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    4  14.675567              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    5  19.754851              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    6  24.383614              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    7  28.491026              → Broadcast    IEEE 802.15.4 10 Beacon Request
-    8 1108.689839              →              IEEE 802.15.4 102 Fragment or Frak
