@@ -21,7 +21,7 @@ sudo echo '# Run Zigbee Sniffer' >> /etc/crontab
 sudo echo '*/6 * * * * root /home/kali/RadioSecurity/Zigbee/sniffer.sh' >> /etc/crontab
 sudo echo '# run Webinterface' >> /etc/crontab
 sudo echo '@reboot kali /home/kali/RadioSecurity/Web/Interface/web.py' >> /etc/crontab
-sudo echo '@reboot service mysql start' >> /etc/crontab
+sudo echo '@reboot root service mysql start' >> /etc/crontab
 echo [*] starting MariaDB
 sudo service mysql start
 echo [*] Restore MariaDB
