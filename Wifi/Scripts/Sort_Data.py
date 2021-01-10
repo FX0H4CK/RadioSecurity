@@ -15,7 +15,7 @@ with open ('/home/kali/RadioSecurity/Wifi/Raw/scan-01.csv', newline='') as csvfi
         if len(row)==15:
             r = requests.get('https://api.macvendors.com/'+row[0]);
             vendor = r.text
-            time.sleep(1)
+            time.sleep(2)
             try:
                 conn = mariadb.connect(
                         user="writer",
@@ -30,6 +30,7 @@ with open ('/home/kali/RadioSecurity/Wifi/Raw/scan-01.csv', newline='') as csvfi
 
             cursor = conn.cursor()
             try:
+                print(vendor)
                 cursor.execute("INSERT INTO ssids(bssid,first_seen,last_seen,channel,speed,privacy,cipher,auth,power,beacons,iv,ip,length,essid, vendor) VALUES ('" + row[0] +"', '" + row[1] +"', '" + row[2] +"', " + row[3] +", " + row[4] +", '" + row[5] +"', '" + row[6] +"', '" + row[7] +"', " + row[8] +", " + row[9] +", " + row[10] +", '" + row[11] +"', " + row[12] +", '" + row[13] + "', '"+ vendor + "') ON DUPLICATE KEY UPDATE last_seen='" + row[2] + "';")
             except mariadb.Error as e:
                 print(f"Error: {e}")

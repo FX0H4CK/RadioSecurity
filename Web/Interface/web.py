@@ -189,7 +189,7 @@ def ignoredwifi():
                 exec("""global vendor%d; vendor%d = ssids[%d][14];"""% (i+1,i+1,i));
         conn.close()
 
-        return render_template("wifi.html",button='Bekannt', SSID1=SSID1, SSID2=SSID2, SSID3=SSID3, SSID4=SSID4, SSID5=SSID5, SSID6=SSID6, SSID7=SSID7, SSID8=SSID8, SSID9=SSID9, SSID10=SSID10, SSID11=SSID11, SSID12=SSID12, SSID13=SSID13, SSID14=SSID14, SSID15=SSID15, Encryption1=ENC1, Encryption2=ENC2, Encryption3=ENC3, Encryption4=ENC4, Encryption5=ENC5, Encryption6=ENC6, Encryption7=ENC7, Encryption8=ENC8, Encryption9=ENC9, Encryption10=ENC10, Encryption11=ENC11, Encryption12=ENC12, Encryption13=ENC13, Encryption14=ENC14, Encryption15=ENC15, MAC1=MAC1, MAC2=MAC2, MAC3=MAC3, MAC4=MAC4, MAC5=MAC5, MAC6=MAC6, MAC7=MAC7,MAC8=MAC8,MAC9=MAC9,MAC10=MAC10,MAC11=MAC11,MAC12=MAC12,MAC13=MAC13,MAC14=MAC14,MAC15=MAC15,ls1=ls1,ls2=ls2,ls3=ls3,ls4=ls4,ls5=ls5,ls6=ls6,ls7=ls7,ls8=ls8,ls9=ls9,ls10=ls10,ls11=ls11,ls12=ls12,ls13=ls13,ls14=ls14,ls15=ls15, vendor1=vendor1, vendor2=vendor2, vendor3=vendor2,vendor4=vendor4,vendor5=vendor5,vendor6=vendor6,vendor7=vendor7,vendor8=vendor8,vendor9=vendor9,vendor10=vendor10,vendor11=vendor11,vendor12=vendor12,vendor13=vendor13,vendor14=vendor14,vendor15=vendor15)
+        return render_template("wifi.html",button='Bekannt', SSID1=SSID1, SSID2=SSID2, SSID3=SSID3, SSID4=SSID4, SSID5=SSID5, SSID6=SSID6, SSID7=SSID7, SSID8=SSID8, SSID9=SSID9, SSID10=SSID10, SSID11=SSID11, SSID12=SSID12, SSID13=SSID13, SSID14=SSID14, SSID15=SSID15, Encryption1=ENC1, Encryption2=ENC2, Encryption3=ENC3, Encryption4=ENC4, Encryption5=ENC5, Encryption6=ENC6, Encryption7=ENC7, Encryption8=ENC8, Encryption9=ENC9, Encryption10=ENC10, Encryption11=ENC11, Encryption12=ENC12, Encryption13=ENC13, Encryption14=ENC14, Encryption15=ENC15, MAC1=MAC1, MAC2=MAC2, MAC3=MAC3, MAC4=MAC4, MAC5=MAC5, MAC6=MAC6, MAC7=MAC7,MAC8=MAC8,MAC9=MAC9,MAC10=MAC10,MAC11=MAC11,MAC12=MAC12,MAC13=MAC13,MAC14=MAC14,MAC15=MAC15,ls1=ls1,ls2=ls2,ls3=ls3,ls4=ls4,ls5=ls5,ls6=ls6,ls7=ls7,ls8=ls8,ls9=ls9,ls10=ls10,ls11=ls11,ls12=ls12,ls13=ls13,ls14=ls14,ls15=ls15, vendor1=vendor1, vendor2=vendor2, vendor3=vendor3,vendor4=vendor4,vendor5=vendor5,vendor6=vendor6,vendor7=vendor7,vendor8=vendor8,vendor9=vendor9,vendor10=vendor10,vendor11=vendor11,vendor12=vendor12,vendor13=vendor13,vendor14=vendor14,vendor15=vendor15)
 
 
 @app.route("/wifi/unknown", methods=["POST", "GET"])
@@ -543,7 +543,7 @@ def unknownble():
             print(f"[x] Error while Connecting: {e}")
         cursor = conn.cursor()
         try:
-            cursor.execute("SELECT * from ble where status IS NULL;")
+            cursor.execute("SELECT * from ble where status IS NULL and connect='False';")
             BLEdata = cursor.fetchall()
         except mariadb.Error as e:
             print(f"[x] Error while Reading Data: {e}")
@@ -622,7 +622,7 @@ def zigbee():
         plt.plot(timestamps,counts,marker="o", color='red')
         plt.gcf().set_size_inches(9,7)
         plt.legend(['Pakete'])
-        plt.savefig('static/zigbee.png') 
+        plt.savefig('/home/kali/RadioSecurity/Web/Interface/static/zigbee.png') 
         
 
 
