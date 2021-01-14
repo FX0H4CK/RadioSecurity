@@ -32,8 +32,11 @@ def home():
             unknown = cursor.fetchall()
             cursor.execute("SELECT * FROM ssids;")
             allssids = cursor.fetchall()
-            percent=len(unknown)/len(allssids)*100;
-            percent=100-int(percent)
+            if len(allssids)==0:
+                percent=100
+            else:
+                percent=len(unknown)/len(allssids)*100;
+                percent=100-int(percent)
             if percent<70:
                 color='orange'
             else:
@@ -41,8 +44,11 @@ def home():
            
             cursor.execute("SELECT * FROM ssids where privacy LIKE '%WPA2%';")
             encrypted = cursor.fetchall()
-            percent_enc=len(encrypted)/len(allssids)*100;
-            percent_enc=int(percent_enc)
+            if len(allssids)==0:
+                percent_enc=100
+            else:
+                percent_enc=len(encrypted)/len(allssids)*100;
+                percent_enc=int(percent_enc)
             if percent_enc>70:
                 color_enc='green'
             else:
@@ -52,8 +58,11 @@ def home():
             allble = cursor.fetchall()
             cursor.execute("SELECT * FROM ble WHERE status IS NULL;")
             unkownble = cursor.fetchall()
-            ble_known=len(unkownble)/len(allble)*100;
-            ble_known=100-int(ble_known)
+            if len(allble)==0:
+                ble_known=100
+            else:
+                ble_known=len(unkownble)/len(allble)*100;
+                ble_known=100-int(ble_known)
             if ble_known<70:
                 color_ble_known='orange'
             else:
