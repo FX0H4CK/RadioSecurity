@@ -1,2 +1,0 @@
-sudo whsniff -c 16 > out.pcap
-tshark -r out.pcap > outfile.txt

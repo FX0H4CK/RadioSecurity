@@ -35,6 +35,10 @@
 h2 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
+h4 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #333;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
